@@ -2,7 +2,7 @@
 
 namespace OperationbI;
 
-static class Program
+internal static class Program
 {
     static readonly IFormatProvider _ifp = CultureInfo.InvariantCulture;
 

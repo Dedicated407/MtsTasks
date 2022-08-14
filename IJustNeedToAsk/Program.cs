@@ -2,7 +2,7 @@
 
 internal static class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
         const int tail = 2;
         var result = new[] {1, 2, 3, 4}.EnumerateFromTail(tail);

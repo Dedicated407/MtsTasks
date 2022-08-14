@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
 
-class Program
+namespace BreakMeCompletely;
+
+internal static class Program
 {
     static void Main(string[] args)
     {
