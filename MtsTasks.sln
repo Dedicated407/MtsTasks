@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreakMeCompletely", "BreakM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperationbI", "OperationbI\OperationbI.csproj", "{97330FCA-F537-4C1D-B49A-2659DA3DA650}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IJustNeedToAsk", "IJustNeedToAsk\IJustNeedToAsk.csproj", "{3A86A99F-4AD2-499D-AAC0-6900828FB6AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{97330FCA-F537-4C1D-B49A-2659DA3DA650}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97330FCA-F537-4C1D-B49A-2659DA3DA650}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97330FCA-F537-4C1D-B49A-2659DA3DA650}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A86A99F-4AD2-499D-AAC0-6900828FB6AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A86A99F-4AD2-499D-AAC0-6900828FB6AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A86A99F-4AD2-499D-AAC0-6900828FB6AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A86A99F-4AD2-499D-AAC0-6900828FB6AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
