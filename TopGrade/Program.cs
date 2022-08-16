@@ -24,15 +24,17 @@ internal static class Program
 
         foreach (int value in inputStream)
         {
-            buffer.AddValue(value);
+            buffer.TryMoveBorder(value);
             
             foreach (var i in buffer.GetCurrentSequence())
             {
                 yield return i;
             }
+
+            buffer.AddValue(value);
         }
 
-        buffer.FlushBuffer();
+        buffer.TryMoveBorder();
 
         foreach (int i in buffer.GetCurrentSequence())
         {

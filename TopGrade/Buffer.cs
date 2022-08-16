@@ -6,34 +6,39 @@ public class Buffer
     private readonly int _sortFactor;
     private int _previousLeftBorder = 0;
     private int _leftBorder = 0;
+    private int _maxValue = 0;
         
     public Buffer(int sortFactor, int maxValue)
     {
-        _indexes = new int[maxValue + 1];
         _sortFactor = sortFactor;
+        _maxValue = maxValue;
+        _indexes = new int[sortFactor + 1];
     }
 
     public void AddValue(int value)
     {
+        this[value]++;
+    }
+
+    public void TryMoveBorder(int value = -1)
+    {
+        if (value == -1)
+        {
+            MoveBorder(_maxValue);
+        }
+        
         var border = value - (_sortFactor + 1);
             
         if (border > 0)
         { 
             MoveBorder(border);
         }
-            
-        this[value]++;
     }
 
     private void MoveBorder(int border)
     {
         _previousLeftBorder = _leftBorder;
         _leftBorder = border;
-    }
-
-    public void FlushBuffer()
-    {
-        MoveBorder(_indexes.Length);
     }
 
     public IEnumerable<int> GetCurrentSequence()
