@@ -4,7 +4,8 @@ internal static class Program
 {
     private static void Main(string[] args)
     {
-        var result = Sort(new[] {1, 4, 2, 4, 5, 7}, 2, 7);
+        // var result = Sort(new[] {1, 4, 2, 4, 5, 7}, 2, 7);
+        var result = Sort(new[] {1, 4, 2, 4, 5, 7, 10, 9, 8, 8, 8, 8, 8, 8, 11}, 2000, 11);
         foreach (var i in result)
         {
             Console.Write($"{i} ");
@@ -20,7 +21,7 @@ internal static class Program
     /// <returns>Отсортированный по возрастанию поток чисел.</returns>
     private static IEnumerable<int> Sort(IEnumerable<int> inputStream, int sortFactor, int maxValue)
     {
-        var buffer = new Buffer(sortFactor, maxValue);
+        var buffer = new Sorter(sortFactor, maxValue);
 
         foreach (int value in inputStream)
         {

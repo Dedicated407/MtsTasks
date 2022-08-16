@@ -1,18 +1,19 @@
 ﻿namespace TopGrade;
 
-public class Buffer
+public class Sorter
 {
     private readonly int[] _indexes;
     private readonly int _sortFactor;
-    private int _previousLeftBorder = 0;
-    private int _leftBorder = 0;
-    private int _maxValue = 0;
+    private readonly int _maxValue;
+    private int _previousLeftBorder;
+    private int _leftBorder;
         
-    public Buffer(int sortFactor, int maxValue)
+    public Sorter(int sortFactor, int maxValue)
     {
         _sortFactor = sortFactor;
         _maxValue = maxValue;
-        _indexes = new int[sortFactor + 1];
+        var size = Math.Min(sortFactor * 2, maxValue);
+        _indexes = new int[size + 1];
     }
 
     public void AddValue(int value)
@@ -24,7 +25,7 @@ public class Buffer
     {
         if (value == -1)
         {
-            MoveBorder(_maxValue);
+            MoveBorder(_maxValue + 1);
         }
         
         var border = value - (_sortFactor + 1);
@@ -49,6 +50,8 @@ public class Buffer
             {
                 yield return i;   
             }
+
+            this[i] = 0;
         }
     }
 
@@ -60,6 +63,6 @@ public class Buffer
 
     private int GetIndex(int index)
     {
-        return index;
+        return index % _indexes.Length;
     }
 }
