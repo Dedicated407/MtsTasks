@@ -23,26 +23,9 @@ internal static class Program
     {
         // Process.GetCurrentProcess().Kill(); // Первый способ - это убить процесс
 
-        // while (true)
-        // {
-        //     StackOverflow(888888888); // Второй способ - это переполнить стек памяти
-        // }
-        //
-        // int StackOverflow(int num)
-        // {
-        //     return num * StackOverflow(num);
-        // }
-        
+        FailProcess();// Второй способ - это переполнить стек памяти
+
         // BeCareful();
-        
-        Object locker = new Object();
-        lock (locker)
-        {
-            while (true)
-            {
-                Thread.Sleep(50);
-            }
-        }
     }
 
     /// <summary>

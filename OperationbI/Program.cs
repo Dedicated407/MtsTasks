@@ -4,7 +4,7 @@ namespace OperationbI;
 
 internal static class Program
 {
-    static readonly IFormatProvider _ifp = CultureInfo.InvariantCulture;
+    static readonly IFormatProvider _ifp = CultureInfo.InvariantCulture; // Объект, не зависящий от языка и региональных параметров
 
     class Number
     {
